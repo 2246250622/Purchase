@@ -1,0 +1,2 @@
+\\qehcndsvr2\wwwroot\Purchase\obj\Debug\Purchase.csprojAssemblyReference.cache
+\\qehcndsvr2\wwwroot\Purchase\obj\Debug\Purchase.csproj.CoreCompileInputs.cache

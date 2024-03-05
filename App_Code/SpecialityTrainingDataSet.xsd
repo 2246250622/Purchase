@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SpecialityTrainingDataSet" targetNamespace="http://tempuri.org/SpecialityTrainingDataSet.xsd" xmlns:mstns="http://tempuri.org/SpecialityTrainingDataSet.xsd" xmlns="http://tempuri.org/SpecialityTrainingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="CNDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CNDConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.CNDConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SpecialityTraining_EXTableAdapter" GeneratorDataComponentClassName="SpecialityTraining_EXTableAdapter" Name="SpecialityTraining_EX" UserDataComponentName="SpecialityTraining_EXTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CNDConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT st.Employee_no as Employee_no, ProgramType, ProgramDetail, Unit, Ward, Rank, Name FROM dbo.SpecialityTraining_EX s, dbo.Staff st where  st.Employee_no = s.Employee_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Employee_no" DataSetColumn="Employee_no" />
+              <Mapping SourceColumn="ProgramType" DataSetColumn="ProgramType" />
+              <Mapping SourceColumn="ProgramDetail" DataSetColumn="ProgramDetail" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Ward" DataSetColumn="Ward" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SpecialityTrainingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="SpecialityTrainingDataSet" msprop:Generator_UserDSName="SpecialityTrainingDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SpecialityTraining_EX" msprop:Generator_TableClassName="SpecialityTraining_EXDataTable" msprop:Generator_TableVarName="tableSpecialityTraining_EX" msprop:Generator_RowChangedName="SpecialityTraining_EXRowChanged" msprop:Generator_TablePropName="SpecialityTraining_EX" msprop:Generator_RowDeletingName="SpecialityTraining_EXRowDeleting" msprop:Generator_RowChangingName="SpecialityTraining_EXRowChanging" msprop:Generator_RowEvHandlerName="SpecialityTraining_EXRowChangeEventHandler" msprop:Generator_RowDeletedName="SpecialityTraining_EXRowDeleted" msprop:Generator_RowClassName="SpecialityTraining_EXRow" msprop:Generator_UserTableName="SpecialityTraining_EX" msprop:Generator_RowEvArgName="SpecialityTraining_EXRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Employee_no" msprop:Generator_ColumnVarNameInTable="columnEmployee_no" msprop:Generator_ColumnPropNameInRow="Employee_no" msprop:Generator_ColumnPropNameInTable="Employee_noColumn" msprop:Generator_UserColumnName="Employee_no" type="xs:int" />
+              <xs:element name="ProgramType" msprop:Generator_ColumnVarNameInTable="columnProgramType" msprop:Generator_ColumnPropNameInRow="ProgramType" msprop:Generator_ColumnPropNameInTable="ProgramTypeColumn" msprop:Generator_UserColumnName="ProgramType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramDetail" msprop:Generator_ColumnVarNameInTable="columnProgramDetail" msprop:Generator_ColumnPropNameInRow="ProgramDetail" msprop:Generator_ColumnPropNameInTable="ProgramDetailColumn" msprop:Generator_UserColumnName="ProgramDetail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ward" msprop:Generator_ColumnVarNameInTable="columnWard" msprop:Generator_ColumnPropNameInRow="Ward" msprop:Generator_ColumnPropNameInTable="WardColumn" msprop:Generator_UserColumnName="Ward">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

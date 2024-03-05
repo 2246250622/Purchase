@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ImmuneDataSet" targetNamespace="http://tempuri.org/ImmuneDataSet.xsd" xmlns:mstns="http://tempuri.org/ImmuneDataSet.xsd" xmlns="http://tempuri.org/ImmuneDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="CNDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CNDConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.CNDConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StaffTableAdapter" GeneratorDataComponentClassName="StaffTableAdapter" Name="Staff" UserDataComponentName="StaffTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CNDConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select Name, Rank, Unit, Ward, VZVStatus, RubellaStatus, MeaslesStatus, MumpsStatus, N95Status, UpdateDate, PpeTrained, PpeTrainer, PpeDate, PpeRefresherDate, PpeEvdTrained, PpeEvdTrainer, PpeEvdDate, PpeEvdRefresherDate From Staff s, IMMUERegRecord i Where s.corpid = i.corpid</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+              <Mapping SourceColumn="Ward" DataSetColumn="Ward" />
+              <Mapping SourceColumn="VZVStatus" DataSetColumn="VZVStatus" />
+              <Mapping SourceColumn="RubellaStatus" DataSetColumn="RubellaStatus" />
+              <Mapping SourceColumn="MeaslesStatus" DataSetColumn="MeaslesStatus" />
+              <Mapping SourceColumn="MumpsStatus" DataSetColumn="MumpsStatus" />
+              <Mapping SourceColumn="N95Status" DataSetColumn="N95Status" />
+              <Mapping SourceColumn="UpdateDate" DataSetColumn="UpdateDate" />
+              <Mapping SourceColumn="PpeTrained" DataSetColumn="PpeTrained" />
+              <Mapping SourceColumn="PpeTrainer" DataSetColumn="PpeTrainer" />
+              <Mapping SourceColumn="PpeDate" DataSetColumn="PpeDate" />
+              <Mapping SourceColumn="PpeRefresherDate" DataSetColumn="PpeRefresherDate" />
+              <Mapping SourceColumn="PpeEvdTrained" DataSetColumn="PpeEvdTrained" />
+              <Mapping SourceColumn="PpeEvdTrainer" DataSetColumn="PpeEvdTrainer" />
+              <Mapping SourceColumn="PpeEvdDate" DataSetColumn="PpeEvdDate" />
+              <Mapping SourceColumn="PpeEvdRefresherDate" DataSetColumn="PpeEvdRefresherDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ImmuneDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="ImmuneDataSet" msprop:Generator_UserDSName="ImmuneDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Staff" msprop:Generator_TableClassName="StaffDataTable" msprop:Generator_TableVarName="tableStaff" msprop:Generator_TablePropName="Staff" msprop:Generator_RowDeletingName="StaffRowDeleting" msprop:Generator_RowChangingName="StaffRowChanging" msprop:Generator_RowEvHandlerName="StaffRowChangeEventHandler" msprop:Generator_RowDeletedName="StaffRowDeleted" msprop:Generator_UserTableName="Staff" msprop:Generator_RowChangedName="StaffRowChanged" msprop:Generator_RowEvArgName="StaffRowChangeEvent" msprop:Generator_RowClassName="StaffRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ward" msprop:Generator_ColumnVarNameInTable="columnWard" msprop:Generator_ColumnPropNameInRow="Ward" msprop:Generator_ColumnPropNameInTable="WardColumn" msprop:Generator_UserColumnName="Ward">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VZVStatus" msprop:Generator_ColumnVarNameInTable="columnVZVStatus" msprop:Generator_ColumnPropNameInRow="VZVStatus" msprop:Generator_ColumnPropNameInTable="VZVStatusColumn" msprop:Generator_UserColumnName="VZVStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="RubellaStatus" msprop:Generator_ColumnVarNameInTable="columnRubellaStatus" msprop:Generator_ColumnPropNameInRow="RubellaStatus" msprop:Generator_ColumnPropNameInTable="RubellaStatusColumn" msprop:Generator_UserColumnName="RubellaStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="MeaslesStatus" msprop:Generator_ColumnVarNameInTable="columnMeaslesStatus" msprop:Generator_ColumnPropNameInRow="MeaslesStatus" msprop:Generator_ColumnPropNameInTable="MeaslesStatusColumn" msprop:Generator_UserColumnName="MeaslesStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="MumpsStatus" msprop:Generator_ColumnVarNameInTable="columnMumpsStatus" msprop:Generator_ColumnPropNameInRow="MumpsStatus" msprop:Generator_ColumnPropNameInTable="MumpsStatusColumn" msprop:Generator_UserColumnName="MumpsStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="N95Status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnN95Status" msprop:Generator_ColumnPropNameInRow="N95Status" msprop:Generator_ColumnPropNameInTable="N95StatusColumn" msprop:Generator_UserColumnName="N95Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateDate" msprop:Generator_ColumnVarNameInTable="columnUpdateDate" msprop:Generator_ColumnPropNameInRow="UpdateDate" msprop:Generator_ColumnPropNameInTable="UpdateDateColumn" msprop:Generator_UserColumnName="UpdateDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PpeTrained" msprop:Generator_ColumnVarNameInTable="columnPpeTrained" msprop:Generator_ColumnPropNameInRow="PpeTrained" msprop:Generator_ColumnPropNameInTable="PpeTrainedColumn" msprop:Generator_UserColumnName="PpeTrained" type="xs:int" minOccurs="0" />
+              <xs:element name="PpeTrainer" msprop:Generator_ColumnVarNameInTable="columnPpeTrainer" msprop:Generator_ColumnPropNameInRow="PpeTrainer" msprop:Generator_ColumnPropNameInTable="PpeTrainerColumn" msprop:Generator_UserColumnName="PpeTrainer" type="xs:int" minOccurs="0" />
+              <xs:element name="PpeDate" msprop:Generator_ColumnVarNameInTable="columnPpeDate" msprop:Generator_ColumnPropNameInRow="PpeDate" msprop:Generator_ColumnPropNameInTable="PpeDateColumn" msprop:Generator_UserColumnName="PpeDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PpeRefresherDate" msprop:Generator_ColumnVarNameInTable="columnPpeRefresherDate" msprop:Generator_ColumnPropNameInRow="PpeRefresherDate" msprop:Generator_ColumnPropNameInTable="PpeRefresherDateColumn" msprop:Generator_UserColumnName="PpeRefresherDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PpeEvdTrained" msprop:Generator_ColumnVarNameInTable="columnPpeEvdTrained" msprop:Generator_ColumnPropNameInRow="PpeEvdTrained" msprop:Generator_ColumnPropNameInTable="PpeEvdTrainedColumn" msprop:Generator_UserColumnName="PpeEvdTrained" type="xs:int" minOccurs="0" />
+              <xs:element name="PpeEvdTrainer" msprop:Generator_ColumnVarNameInTable="columnPpeEvdTrainer" msprop:Generator_ColumnPropNameInRow="PpeEvdTrainer" msprop:Generator_ColumnPropNameInTable="PpeEvdTrainerColumn" msprop:Generator_UserColumnName="PpeEvdTrainer" type="xs:int" minOccurs="0" />
+              <xs:element name="PpeEvdDate" msprop:Generator_ColumnVarNameInTable="columnPpeEvdDate" msprop:Generator_ColumnPropNameInRow="PpeEvdDate" msprop:Generator_ColumnPropNameInTable="PpeEvdDateColumn" msprop:Generator_UserColumnName="PpeEvdDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PpeEvdRefresherDate" msprop:Generator_ColumnVarNameInTable="columnPpeEvdRefresherDate" msprop:Generator_ColumnPropNameInRow="PpeEvdRefresherDate" msprop:Generator_ColumnPropNameInTable="PpeEvdRefresherDateColumn" msprop:Generator_UserColumnName="PpeEvdRefresherDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PractisingCertificateDataSet" targetNamespace="http://tempuri.org/PractisingCertificateDataSet.xsd" xmlns:mstns="http://tempuri.org/PractisingCertificateDataSet.xsd" xmlns="http://tempuri.org/PractisingCertificateDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="CNDConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CNDConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.CNDConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Pro_CertTableAdapter" GeneratorDataComponentClassName="Pro_CertTableAdapter" Name="Pro_Cert" UserDataComponentName="Pro_CertTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CNDConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select p.Employee_no as Employee_no, Unit, Ward, Name, Rank, Reg_no, Cert_Name, Valid_Date From Pro_Cert p, (Select Employee_no, Unit, Ward, Name, Rank From Staff) As s where s.Employee_no = p.Employee_no</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Employee_no" DataSetColumn="Employee_no" />
+              <Mapping SourceColumn="Reg_no" DataSetColumn="Reg_no" />
+              <Mapping SourceColumn="Cert_Name" DataSetColumn="Cert_Name" />
+              <Mapping SourceColumn="Valid_Date" DataSetColumn="Valid_Date" />
+              <Mapping SourceColumn="Unit" DataSetColumn="Unit" />
+              <Mapping SourceColumn="Ward" DataSetColumn="Ward" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PractisingCertificateDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="False" msprop:Generator_DataSetName="PractisingCertificateDataSet" msprop:Generator_UserDSName="PractisingCertificateDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pro_Cert" msprop:Generator_TableClassName="Pro_CertDataTable" msprop:Generator_TableVarName="tablePro_Cert" msprop:Generator_TablePropName="Pro_Cert" msprop:Generator_RowDeletingName="Pro_CertRowDeleting" msprop:Generator_RowChangingName="Pro_CertRowChanging" msprop:Generator_RowEvHandlerName="Pro_CertRowChangeEventHandler" msprop:Generator_RowDeletedName="Pro_CertRowDeleted" msprop:Generator_UserTableName="Pro_Cert" msprop:Generator_RowChangedName="Pro_CertRowChanged" msprop:Generator_RowEvArgName="Pro_CertRowChangeEvent" msprop:Generator_RowClassName="Pro_CertRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Employee_no" msprop:Generator_ColumnVarNameInTable="columnEmployee_no" msprop:Generator_ColumnPropNameInRow="Employee_no" msprop:Generator_ColumnPropNameInTable="Employee_noColumn" msprop:Generator_UserColumnName="Employee_no" type="xs:int" minOccurs="0" />
+              <xs:element name="Reg_no" msprop:Generator_ColumnVarNameInTable="columnReg_no" msprop:Generator_ColumnPropNameInRow="Reg_no" msprop:Generator_ColumnPropNameInTable="Reg_noColumn" msprop:Generator_UserColumnName="Reg_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cert_Name" msprop:Generator_ColumnVarNameInTable="columnCert_Name" msprop:Generator_ColumnPropNameInRow="Cert_Name" msprop:Generator_ColumnPropNameInTable="Cert_NameColumn" msprop:Generator_UserColumnName="Cert_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Valid_Date" msprop:Generator_ColumnVarNameInTable="columnValid_Date" msprop:Generator_ColumnPropNameInRow="Valid_Date" msprop:Generator_ColumnPropNameInTable="Valid_DateColumn" msprop:Generator_UserColumnName="Valid_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ward" msprop:Generator_ColumnVarNameInTable="columnWard" msprop:Generator_ColumnPropNameInRow="Ward" msprop:Generator_ColumnPropNameInTable="WardColumn" msprop:Generator_UserColumnName="Ward">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
