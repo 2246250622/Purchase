@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
+<br>
     <div class="container">
-        <h1>Create Detail</h1>
+        <h1>Create Details</h1>
         <form class="row g-3" runat="server" >
             <div class="col-md-3">
               <label for="orderId" class="form-label">Order ID</label>
@@ -43,64 +44,124 @@
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <label for="lbl_item_name" class="form-label">Item_Name</label>
-                <asp:TextBox class="form-control is-valid" id="lbl_item_name" Rows="7" TextMode="MultiLine" runat="server"  ClientIDMode="Static" required disabled></asp:TextBox>
+            
+
+            <div class="col-md-3">
+                <label for="lbl_item_name" class="form-label">Item Name</label>
+                <asp:TextBox class="form-control is-valid" id="lbl_item_name" Rows="1" TextMode="MultiLine" runat="server"  ClientIDMode="Static" required disabled></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_item_name_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_name_SysRecordDate" runat="server" Text=""></asp:Label>)
                 </div>
             </div>
 
-            <div class="col-md-3" >
-                <label for="lbl_item_quality" class="form-label">Item Quality</label>
-                <asp:TextBox class="form-control is-valid" id="lbl_item_quality" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
+            <div class="col-md-2" >
+                <label for="lbl_item_quality" class="form-label">Item Quantity</label>
+                <asp:TextBox class="form-control is-valid" id="lbl_item_quality" runat="server" type="number" min="0" ClientIDMode="Static"  ></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_item_quality_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_quality_SysRecordDate" runat="server" Text="" ></asp:Label>)
                 </div>
-
-                
+              </div>
+                <div class="col-md-2" >
                 <label for="lbl_item_unit_price" class="form-label">Item Unit Price</label>
                 <div class="input-group">
                 <span class="input-group-text">$</span>
-                <asp:TextBox class="form-control is-valid" id="lbl_item_unit_price" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
+                <asp:TextBox class="form-control is-valid" id="lbl_item_unit_price" step='0.01' runat="server" min="0" type="number"  ClientIDMode="Static"  ></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_item_unit_price_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_unit_price_SysRecordDate" runat="server" Text=""></asp:Label>)
                 </div>
             </div>
             </div>
+            <div class="col-md-2">
+              <label for="lbl_item_additional_charges" class="form-label">Item Additional Charges</label>
+              <div class="input-group">
+                  <span class="input-group-text">$</span>
+              <asp:TextBox class="form-control is-valid" id="lbl_item_additional_charges" runat="server"  step='0.01' ClientIDMode="Static" min="0" type="number" ></asp:TextBox>
+              <div class="valid-feedback">
+                <asp:Label ID="lbl_item_additional_charges_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_additional_charges_SysRecordDate" runat="server" Text=""></asp:Label>)
+              </div></div>
+          </div>
  
-            <div class="col-md-4">
+
+
+              <div class="col-md-3">
+                <label for="lbl_pr_raised" class="form-label">PR Raised</label>
+                <asp:TextBox class="form-control is-valid" id="lbl_pr_raised" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
+                <div class="valid-feedback">
+                  <asp:Label ID="lbl_pr_raised_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_pr_raised_SysRecordDate" runat="server" Text=""></asp:Label>)
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="lbl_po" class="form-label">PO</label>
+                <asp:TextBox class="form-control is-valid" id="lbl_po" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
+                <div class="valid-feedback">
+                  <asp:Label ID="lbl_po_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_po_SysRecordDate" runat="server" Text=""></asp:Label>)
+                </div>
+              </div>
+
+              <div class="col-md-3">
                 <label for="lbl_assign" class="form-label">Assign</label>
                 <asp:TextBox class="form-control is-valid" id="lbl_assign" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_assign_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_assign_SysRecordDate" runat="server" Text=""></asp:Label>)
                 </div>
-           
-
-                <div class="row">
-                <div class="col-md-6">
-                    <label for="lbl_item_additional_charges" class="form-label">Item Additional Charges</label>
-                    <div class="input-group">
-                        <span class="input-group-text">$</span>
-                    <asp:TextBox class="form-control is-valid" id="lbl_item_additional_charges" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
-                    <div class="valid-feedback">
-                      <asp:Label ID="lbl_item_additional_charges_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_additional_charges_SysRecordDate" runat="server" Text=""></asp:Label>)
-                    </div></div>
-                </div>
+              </div>
+            
             
 
-                <div class="dropdown col-md-6">
-                    <label for="lbl_budget_code" class="form-label">Budge</label>
-                    <asp:TextBox class="form-control is-valid" id="lbl_budget_code" runat="server"  ClientIDMode="Static"  ></asp:TextBox>
-                    <div class="valid-feedback">
-                      <asp:Label ID="lbl_budget_code_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_budget_code_SysRecordDate" runat="server" Text=""></asp:Label>)
-                    </div>
-                </div>
-            </div>
-            </div>
-         
 
-           
+
+
+
+                <div class="col-md-3">
+                  <label for="lbl_budget_code" class="form-label">Budget Code</label>
+              <asp:DropDownList   class="btn btn-secondary dropdown-toggle"  ID="lbl_budget_code" runat="server"  style="width:320px;">
+                  <asp:ListItem class="dropdown-item" Value="38211 CND Nursing Administration">38211 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="38222 CND Nursing Administration">38222 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="38224 CND Nursing Administration">38224 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="38443 ICT">38443 ICT</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39072 CND Nursing Administration">39072 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39073 CND Nursing Administration">39073 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39079 CND Nursing Administration">39079 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39092 CND Nursing Administration">39092 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39107 CND Nursing Administration">39107 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39114 CND Nursing Administration">39114 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39145 CND Nursing Administration">39145 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="39636 CND Nursing Administration">39636 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="47101 CND Nursing Administration">47101 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="47111 CND Nursing Administration">47111 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="47198 CND Nursing Administration">47198 CND Nursing Administration</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="70003 Central Training - Nursing Professional Committee (Overseas) (5)">70003 Central Training - Nursing Professional Committee (Overseas) (5)</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="72003 Central Training - Nursing Professional Committee (Local) (5)">72003 Central Training - Nursing Professional Committee (Local) (5)</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="72006 Department Training (Local)">72006 Department Training (Local)</asp:ListItem>
+                  <asp:ListItem class="dropdown-item" Value="73206 HA Nursing Schools (Basic Nursing Education)">73206 HA Nursing Schools (Basic Nursing Education)</asp:ListItem>
+              </asp:DropDownList>
+
+              <asp:Label ID="lbl_budget_code_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_budget_code_SysRecordDate" runat="server" Text=""></asp:Label>)
+
+
+
+            </div>
+          
+
+            <div class="col-md-3">
+              <label for="lbl_process" class="form-label">Process Stage</label>
+          <asp:DropDownList   class="btn btn-secondary dropdown-toggle"  ID="lbl_process" runat="server"  style="width:320px;">
+              <asp:ListItem class="dropdown-item" Value="Requester">Requester</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Confirm_Budge_Code">Confirm Budget Code</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Confirm_Assign">Confirm Assign</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Quotation">Quotation</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Specification">Specification</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="PR Raised">PR Raised</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="PO">PO</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Delivery">Delivery</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Payment">Payment</asp:ListItem>
+              <asp:ListItem class="dropdown-item" Value="Complete">Complete</asp:ListItem>
+          </asp:DropDownList>
+      
+          
+          <asp:Label ID="lbl_process_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_process_SysRecordDate" runat="server" Text=""></asp:Label>)
+      </div>
           
 
 
@@ -108,34 +169,16 @@
         
 
 
-            <div class="col-md-5">
+            <div class="col-md-12">
                 <label for="lbl_remark" class="form-label">Remark</label>
-                <asp:TextBox class="form-control is-valid" id="lbl_remark" Rows="5" TextMode="MultiLine" runat="server"  ClientIDMode="Static"></asp:TextBox>
+                <asp:TextBox class="form-control is-valid" id="lbl_remark" Rows="7" TextMode="MultiLine" runat="server"  ClientIDMode="Static"></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_remark_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_remark_SysRecordDate" runat="server" Text=""></asp:Label>)
                 </div>
             </div>
-<center>
-            <div class="col-md-3">
-                <label for="lbl_process" class="form-label">Process Stage</label>
-            <asp:DropDownList   class="btn btn-secondary dropdown-toggle"  ID="lbl_process" runat="server"  style="width:320px;">
-                <asp:ListItem class="dropdown-item" Value="Requester">Requester</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Confirm_Budge_Code">Confirm Budge Code</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Confirm_Assign">Confirm Assign</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Quotation">Quotation</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Specification">Specification</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="PR Raised">PR Raised</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="PO">PO</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Delivery">Delivery</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Payment">Payment</asp:ListItem>
-                <asp:ListItem class="dropdown-item" Value="Complete">Complete</asp:ListItem>
-            </asp:DropDownList>
-        
-            
-            <asp:Label ID="lbl_process_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_process_SysRecordDate" runat="server" Text=""></asp:Label>)
-        </div>
-            </center>
 
+       
+        
 
 
 
@@ -148,10 +191,13 @@
 
 
 
-
+        <center><div class="col-md-6">
             <!-- Add other form fields for additional data -->
-            <button type="button" class="btn btn-secondary" onclick="goBack()">Back</button>
+            <button type="button" class="btn btn-secondary" onclick="goBack()"> Back </button>
+          </div><br>
+            <div class="col-md-6">
             <asp:Button type="submit" ID="btnSave" OnClick="btnSave_Click" class="btn btn-primary" runat="server" Text="Save Order"  OnClientClick="return myFunction();" CausesValidation="true" />
+          </div></center>
             <asp:HiddenField ID="HiddenField1" runat="server" />
             <asp:HiddenField ID="HiddenField2" runat="server" />
             <asp:HiddenField ID="HiddenField3" runat="server" />
@@ -159,12 +205,15 @@
             <asp:HiddenField ID="HiddenField5" runat="server" />
             <asp:HiddenField ID="HiddenField6" runat="server" />
             <asp:HiddenField ID="HiddenField7" runat="server" />
+            <asp:HiddenField ID="HiddenField8" runat="server" />
+            <asp:HiddenField ID="HiddenField9" runat="server" />
 
         </form>
     </div>
 
     <!-- Include Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 <script>
@@ -183,6 +232,8 @@ function goBack() {
       var assign = document.getElementById("lbl_assign").value;
       var process = document.getElementById("lbl_process").value;
       var remark = document.getElementById("lbl_remark").value;
+      var pr_raised = document.getElementById("lbl_pr_raised").value;
+      var po = document.getElementById("lbl_po").value;
 
     
       // Store the value in the session storage
@@ -193,6 +244,8 @@ function goBack() {
       document.getElementById("HiddenField5").value = assign
       document.getElementById("HiddenField6").value = process
       document.getElementById("HiddenField7").value = remark
+      document.getElementById("HiddenField8").value = pr_raised
+      document.getElementById("HiddenField9").value = po
 
     
       // Return true to allow the form to submit

@@ -92,13 +92,11 @@ Partial Class index
                 If Session("role") = "admin" Then
                         Response.Write("<script type='text/javascript'>alert('Session expired, please login again!'); window.location = 'index.aspx?page=intro';")
                         Response.Redirect("mangement.aspx")
-                    Else If Session("role") = "viewer"
-                        Response.Redirect("view.aspx")
+
                     Else
-                    lbl_errorMsg.ForeColor = Drawing.Color.Red
-                    lbl_errorMsg.Text = "You are not authorized to access this system."
-                    txt_username.Text = ""
-                    txt_password.Text = ""
+                    Session("corpID") = username
+                    Session("role") = "viewer"
+                    Response.Redirect("view.aspx")
                 End If
                 
 

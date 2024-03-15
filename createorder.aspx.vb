@@ -90,6 +90,14 @@ Partial Class createorder
                     Session("remark") = dr.Item("remark")
                     Session("remark_admin") = dr.Item("remark_admin")
                     Session("remark_SysRecordDate") = dr.Item("remark_SysRecordDate")
+
+                    Session("pr_raised") = dr.Item("pr_raised")
+                    Session("pr_raised_admin") = dr.Item("pr_raised_admin")
+                    Session("pr_raised_SysRecordDate") = dr.Item("pr_raised_SysRecordDate")
+
+                    Session("po") = dr.Item("po")
+                    Session("po_admin") = dr.Item("po_admin")
+                    Session("po_SysRecordDate") = dr.Item("po_SysRecordDate")
                     
                     
                 End While
@@ -216,6 +224,26 @@ Partial Class createorder
             lbl_remark_SysRecordDate.Text = ""
             End Try
 
+                        Try
+            lbl_pr_raised.text = Session("pr_raised")
+            lbl_pr_raised_admin.Text = Session("pr_raised_admin")
+            lbl_pr_raised_SysRecordDate.Text = Session("pr_raised_SysRecordDate")
+            Catch ex As Exception
+            lbl_pr_raised.text = ""
+            lbl_pr_raised_admin.Text = ""
+            lbl_pr_raised_SysRecordDate.Text = ""
+            End Try
+
+                        Try
+            lbl_po.text = Session("po")
+            lbl_po_admin.Text = Session("po_admin")
+            lbl_po_SysRecordDate.Text = Session("po_SysRecordDate")
+            Catch ex As Exception
+            lbl_po.text = ""
+            lbl_po_admin.Text = ""
+            lbl_po_SysRecordDate.Text = ""
+            End Try
+
 
 Select Case Session("process")
 
@@ -223,9 +251,9 @@ Select Case Session("process")
         Session("processCode") = "0%"
     Case "Requester"
         Session("processCode") = "10%"
-    Case "Confirm Budge Code"
+    Case "Confirm_Budge_Code"
         Session("processCode") = "20%"
-    Case "Confirm Assign"
+    Case "Confirm_Assign"
         Session("processCode") = "30%"
     Case "Quotation"
         Session("processCode") = "40%"
@@ -256,20 +284,40 @@ Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Cl
     Dim requesterId As String = lbl_requester_id.Text
     Dim itemFinancialYear As String = lbl_item_financial_year.Text
     Dim itemName As String = lbl_item_name.Text
-    Dim itemquality As String = HiddenField1.value
-    Dim itemunitprice As String = HiddenField2.value
+    Dim itemquality As Integer = HiddenField1.value
+    Dim itemunitprice As Decimal = HiddenField2.value
     Dim additionalCharges As String = HiddenField3.value
     Dim budgetcode As String = HiddenField4.value
     Dim assign As String = HiddenField5.value
     Dim process As String = HiddenField6.value
     Dim remark As String = HiddenField7.value
-
-
-
+    Dim amount As Decimal = 0
+    Dim prraised As String = HiddenField8.value
+    Dim po As String = HiddenField9.value
     
+
+
+        If Not String.IsNullOrEmpty(HiddenField1.value) AndAlso Integer.TryParse(HiddenField1.value, itemQuality) AndAlso
+   Not String.IsNullOrEmpty(HiddenField2.value) AndAlso Decimal.TryParse(HiddenField2.value, itemUnitPrice) Then
+
+    ' Check if item_additional_charges is provided
+    If Not String.IsNullOrEmpty(HiddenField3.value) AndAlso Decimal.TryParse(HiddenField3.value, additionalCharges) Then
+         amount = (itemQuality * itemUnitPrice) + additionalCharges
+
+            Else
+        ' Handle the case when item_additional_charges is not provided
+        ' You can assign a default value or take appropriate action
+         amount = (itemQuality * itemUnitPrice) 
+    End If
+Else
+    ' Handle the case when conversion fails
+    ' You can show an error message or take appropriate action
+     amount  = 0
+End If
+
     oconn.Open()
     myCommand1.Parameters.Clear()
-    myCommand1.CommandText = "Update [order] set admin_id = @admin_id, requester_id = @requester_id, item_financial_year = @item_financial_year, item_name = @item_name ,item_quality = @item_quality, item_quality_admin = @item_quality_admin, item_quality_SysRecordDate = @item_quality_SysRecordDate,item_unit_price = @item_unit_price, item_unit_price_admin = @item_unit_price_admin, item_unit_price_SysRecordDate = @item_unit_price_SysRecordDate,item_additional_charges = @item_additional_charges ,item_additional_charges_admin = @item_additional_charges_admin, item_additional_charges_SysRecordDate = @item_additional_charges_SysRecordDate,assign = @assign, assign_admin = @assign_admin, assign_SysRecordDate = @assign_SysRecordDate, budget_code = @budget_code,budget_code_admin = @budget_code_admin, budget_code_SysRecordDate = @budget_code_SysRecordDate, process = @process, process_admin = @process_admin, process_SysRecordDate = @process_SysRecordDate ,remark = @remark, remark_admin = @remark_admin, remark_SysRecordDate = @remark_SysRecordDate Where id = @id"
+    myCommand1.CommandText = "Update [order] set admin_id = @admin_id, requester_id = @requester_id, item_financial_year = @item_financial_year, item_name = @item_name ,item_quality = @item_quality, item_quality_admin = @item_quality_admin, item_quality_SysRecordDate = @item_quality_SysRecordDate,item_unit_price = @item_unit_price, item_unit_price_admin = @item_unit_price_admin, item_unit_price_SysRecordDate = @item_unit_price_SysRecordDate,item_additional_charges = @item_additional_charges ,item_additional_charges_admin = @item_additional_charges_admin, item_additional_charges_SysRecordDate = @item_additional_charges_SysRecordDate,assign = @assign, assign_admin = @assign_admin, assign_SysRecordDate = @assign_SysRecordDate, budget_code = @budget_code,budget_code_admin = @budget_code_admin, budget_code_SysRecordDate = @budget_code_SysRecordDate, process = @process, process_admin = @process_admin, process_SysRecordDate = @process_SysRecordDate ,remark = @remark, remark_admin = @remark_admin, remark_SysRecordDate = @remark_SysRecordDate, Amount = @Amount, pr_raised = @pr_raised, pr_raised_admin = @pr_raised_admin, pr_raised_SysRecordDate = @pr_raised_SysRecordDate, po = @po, po_admin = @po_admin, po_SysRecordDate = @po_SysRecordDate   Where id = @id"
     myCommand1.Parameters.AddWithValue("@id", orderId)
     myCommand1.Parameters.AddWithValue("@admin_id", adminId)
     myCommand1.Parameters.AddWithValue("@requester_id", requesterId)
@@ -282,6 +330,10 @@ Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Cl
     myCommand1.Parameters.AddWithValue("@assign", assign)
     myCommand1.Parameters.AddWithValue("@process", process)
     myCommand1.Parameters.AddWithValue("@remark", remark)
+    myCommand1.Parameters.AddWithValue("@Amount", Amount)
+    myCommand1.Parameters.AddWithValue("@pr_raised", prraised)
+    myCommand1.Parameters.AddWithValue("@po", po)
+
 
 If HiddenField1.Value <> lbl_item_quality.Text Then
     myCommand1.Parameters.AddWithValue("@item_quality_admin", Session("corpID"))
@@ -339,6 +391,24 @@ Else
     myCommand1.Parameters.AddWithValue("@remark_SysRecordDate", Session("remark_SysRecordDate"))
 End If
 
+If HiddenField8.Value <> lbl_pr_raised.Text Then
+    myCommand1.Parameters.AddWithValue("@pr_raised_admin", Session("corpID"))
+    myCommand1.Parameters.AddWithValue("@pr_raised_SysRecordDate", DateTime.Now)
+Else
+    myCommand1.Parameters.AddWithValue("@pr_raised_admin", Session("pr_raised_admin"))
+    myCommand1.Parameters.AddWithValue("@pr_raised_SysRecordDate", Session("pr_raised_SysRecordDate"))
+End If
+
+
+If HiddenField9.Value <> lbl_po.Text Then
+    myCommand1.Parameters.AddWithValue("@po_admin", Session("corpID"))
+    myCommand1.Parameters.AddWithValue("@po_SysRecordDate", DateTime.Now)
+Else
+    myCommand1.Parameters.AddWithValue("@po_admin", Session("po_admin"))
+    myCommand1.Parameters.AddWithValue("@po_SysRecordDate", Session("po_SysRecordDate"))
+End If
+
+
 
 
 
@@ -351,7 +421,6 @@ End If
     Response.Write("<script type='text/javascript'>alert('Order updated successfully!'); window.location = 'createorder.aspx';")
     Response.Write("</" + "script>")
 End Sub
-
 
 
 
