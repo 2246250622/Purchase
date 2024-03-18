@@ -29,7 +29,7 @@
   
 
     </script>
-    <form id="form1" runat="server">
+    <form id="form12" runat="server">
         <nav class="navbar navbar-expand-lg "  style="background-color: #e3f2fd;">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
@@ -137,11 +137,11 @@
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="admin_id" HeaderText="Admin ID" SortExpression="admin_id"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="requester_id" HeaderText="Requester Name" SortExpression="requester_id"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_financial_year" HeaderText="Financial Year" SortExpression="item_financial_year"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item" SortExpression="item_name"/>
+                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item Descriptions" SortExpression="item_name"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_quality" HeaderText="Quantity" SortExpression="item_quality"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_unit_price" HeaderText="Unit Price" SortExpression="item_unit_price"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_additional_charges" HeaderText="Additional Charges" SortExpression="item_additional_charges"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Budge Code" SortExpression="budget_code"/>
+                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Funding Source" SortExpression="budget_code"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="assign" HeaderText="Assign" SortExpression="assign"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="process" HeaderText="Status" ItemStyle-CssClass="p-3 mb-2 text-danger" SortExpression="process"/>
                              </Columns>

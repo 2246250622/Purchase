@@ -110,38 +110,38 @@
 
 
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btnradio0">All</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio0">All</label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-        <label class="btn btn-outline-primary" for="btnradio1">2023</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <label class="btn btn-outline-primary" for="btnradio1">2023-2024</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio2">2024-2025</label>
+    
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio3">2025-2026</label>
       
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio2">2024</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio4">2026-2027</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio5">2027-2028</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio6">2028-2029</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio7">2029-2030</label>
+
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio8">2030-2031</label>
       
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio3">2025</label>
-        
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio4">2026</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio9">2031-2032</label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio5">2027</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio6">2028</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio7">2029</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio8">2030</label>
-        
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio9">2031</label>
-
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio10">2032</label>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btnradio10">2032-2033</label>
       </div>&nbsp; &nbsp;&nbsp; &nbsp;
 
 
@@ -254,45 +254,45 @@ function filterData() {
       total += Number(amountCell.textContent);
       // Show all rows
       row.style.display = "";
-    } else if (y2023.checked && financialyearCell.innerText === "2023") {
+    } else if (y2023.checked && financialyearCell.innerText === "23/24") {
       total += Number(amountCell.textContent);
       // Show rows with incomplete status
       row.style.display = "";
       
       
-    } else if (y2024.checked && financialyearCell.innerText === "2024") {
+    } else if (y2024.checked && financialyearCell.innerText === "24/25") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2025.checked && financialyearCell.innerText === "2025") {
+    }else if (y2025.checked && financialyearCell.innerText === "25/26") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2026.checked && financialyearCell.innerText === "2026") {
+    }else if (y2026.checked && financialyearCell.innerText === "26/27") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2027.checked && financialyearCell.innerText === "2027") {
+    }else if (y2027.checked && financialyearCell.innerText === "27/28") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2028.checked && financialyearCell.innerText === "2028") {
+    }else if (y2028.checked && financialyearCell.innerText === "28/29") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2029.checked && financialyearCell.innerText === "2029") {
+    }else if (y2029.checked && financialyearCell.innerText === "29/30") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2030.checked && financialyearCell.innerText === "2030") {
+    }else if (y2030.checked && financialyearCell.innerText === "30/31") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2031.checked && financialyearCell.innerText === "2031") {
+    }else if (y2031.checked && financialyearCell.innerText === "31/32") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
-    }else if (y2032.checked && financialyearCell.innerText === "2032") {
+    }else if (y2032.checked && financialyearCell.innerText === "32/33") {
       total += Number(amountCell.textContent);
       // Show rows with complete status
       row.style.display = "";
@@ -307,8 +307,6 @@ function filterData() {
 // Initial filtering on page load (show all rows)
 filterData();
         </script>
-
-
 
 
 

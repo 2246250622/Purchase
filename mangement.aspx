@@ -96,7 +96,7 @@
                                     <asp:TextBox ID="RequesterIdTextBox" class="form-control" runat="server" Width="320px" CssClass="" required></asp:TextBox>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="ItemNameTextBox" class="form-label">Item Name</label>
+                                    <label for="ItemNameTextBox" class="form-label">Item Descriptions</label>
                                     <asp:TextBox ID="ItemNameTextBox" TextMode="MultiLine"  class="form-control" runat="server" Width="320px" CssClass="" required></asp:TextBox>
                                 </div>
                                 <div class="mb-3">
@@ -133,28 +133,29 @@
                                 
                                
                                 <div class="col-md-3">
-                                  <label for="BudgetCodeTextBox" class="form-label" runat="server">Budget Code</label>
+                                  <label for="BudgetCodeTextBox" class="form-label" runat="server">Funding source</label>
                               <asp:DropDownList   class="btn btn-light dropdown-toggle"  ID="BudgetCodeTextBox"  style="width:320px;" runat="server">
-                                  <asp:ListItem class="dropdown-item" Value="38211 CND Nursing Administration">38211 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="38222 CND Nursing Administration">38222 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="38224 CND Nursing Administration">38224 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="38443 ICT">38443 ICT</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39072 CND Nursing Administration">39072 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39073 CND Nursing Administration">39073 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39079 CND Nursing Administration">39079 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39092 CND Nursing Administration">39092 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39107 CND Nursing Administration">39107 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39114 CND Nursing Administration">39114 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39145 CND Nursing Administration">39145 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="39636 CND Nursing Administration">39636 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="47101 CND Nursing Administration">47101 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="47111 CND Nursing Administration">47111 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="47198 CND Nursing Administration">47198 CND Nursing Administration</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="70003 Central Training - Nursing Professional Committee (Overseas) (5)">70003 Central Training - Nursing Professional Committee (Overseas) (5)</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="72003 Central Training - Nursing Professional Committee (Local) (5)">72003 Central Training - Nursing Professional Committee (Local) (5)</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="72006 Department Training (Local)">72006 Department Training (Local)</asp:ListItem>
-                                  <asp:ListItem class="dropdown-item" Value="73206 HA Nursing Schools (Basic Nursing Education)">73206 HA Nursing Schools (Basic Nursing Education)</asp:ListItem>
-                              </asp:DropDownList>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38211 CND Nursing Administration">38211 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38222 CND Nursing Administration">38222 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38224 CND Nursing Administration">38224 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38443 ICT">38443 ICT</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39072 CND Nursing Administration">39072 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39073 CND Nursing Administration">39073 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39079 CND Nursing Administration">39079 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39092 CND Nursing Administration">39092 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39107 CND Nursing Administration">39107 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39114 CND Nursing Administration">39114 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39145 CND Nursing Administration">39145 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39636 CND Nursing Administration">39636 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47101 CND Nursing Administration">47101 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47111 CND Nursing Administration">47111 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47198 CND Nursing Administration">47198 CND Nursing Administration</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="70003 Central Training - Nursing Professional Committee (Overseas) (5)">70003 Central Training - Nursing Professional Committee (Overseas) (5)</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="72003 Central Training - Nursing Professional Committee (Local) (5)">72003 Central Training - Nursing Professional Committee (Local) (5)</asp:ListItem>
+                                  <asp:ListItem  style="text-align: left;" class="dropdown-item" Value="72006 Department Training (Local)">72006 Department Training (Local)</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="73206 HA Nursing Schools (Basic Nursing Education)">73206 HA Nursing Schools (Basic Nursing Education)</asp:ListItem>
+                                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="------- Others">------- Others</asp:ListItem>
+                                </asp:DropDownList>
                           
                             </div><br>
 
@@ -213,11 +214,11 @@
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="admin_id" HeaderText="Admin ID" SortExpression="admin_id"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="requester_id" HeaderText="Requester Name" SortExpression="requester_id"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_financial_year" HeaderText="Financial Year" SortExpression="item_financial_year"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item" SortExpression="item_name"/>
+                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item Descriptions" SortExpression="item_name"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_quality" HeaderText="Quantity" SortExpression="item_quality"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_unit_price" HeaderText="Unit Price" SortExpression="item_unit_price"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_additional_charges" HeaderText="Additional Charges" SortExpression="item_additional_charges"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Budget Code" SortExpression="budget_code"/>
+                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Funding Source" SortExpression="budget_code"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="assign" HeaderText="Assign" SortExpression="assign"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="process" HeaderText="Status" ItemStyle-CssClass="p-3 mb-2 text-danger" SortExpression="process"/>
                             <asp:CommandField SelectText="Edit" ShowSelectButton="True" ItemStyle-CssClass="GridViewFont" ItemStyle-HorizontalAlign="Center" />
