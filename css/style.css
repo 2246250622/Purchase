@@ -8156,7 +8156,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #fbceb5; }
+  color: #ffffff; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
@@ -8331,8 +8331,8 @@ textarea.form-control {
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #fbceb5 !important;
-    border: 1px solid #fbceb5 !important;
+    background: #FF8484 !important;
+    border: 1px solid #FF8484 !important;
     color: #000 !important; }
     .btn.btn-primary:hover {
       border: 1px solid #fbceb5;

@@ -32,8 +32,9 @@
     <form id="form1" runat="server">
       <nav class="navbar navbar-expand-lg "  style="background-color: #e3f2fd;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="./view.aspx">
             <img src="images/qeh_logo.png" alt="Bootstrap" width="40" height="40">
+            Purchase Tracking System
           </a>
     
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,11 +44,11 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="https://qehcndsvr2/Purchase/view.aspx">Dashboard</a>
+                <a class="nav-link " aria-current="page" href="./view.aspx">Dashboard</a>
               </li>
      
               <li class="nav-item">
-                <a class="nav-link"  href="https://qehcndsvr2/Purchase/financialreport_viewer.aspx">Financial Report</a>
+                <a class="nav-link"  href="./financialreport_viewer.aspx">Financial Report</a>
               </li>
 
           

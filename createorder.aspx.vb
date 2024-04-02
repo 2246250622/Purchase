@@ -234,7 +234,7 @@ Partial Class createorder
             lbl_pr_raised_SysRecordDate.Text = ""
             End Try
 
-                        Try
+            Try
             lbl_po.text = Session("po")
             lbl_po_admin.Text = Session("po_admin")
             lbl_po_SysRecordDate.Text = Session("po_SysRecordDate")
@@ -243,6 +243,8 @@ Partial Class createorder
             lbl_po_admin.Text = ""
             lbl_po_SysRecordDate.Text = ""
             End Try
+
+
 
 
 Select Case Session("process")
@@ -283,7 +285,6 @@ Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Cl
     Dim adminId As String = lbl_admin_id.Text
     Dim requesterId As String = lbl_requester_id.Text
     Dim itemFinancialYear As String = lbl_item_financial_year.Text
-    Dim itemName As String = lbl_item_name.Text
     Dim itemquality As Integer = HiddenField1.value
     Dim itemunitprice As Decimal = HiddenField2.value
     Dim additionalCharges As String = HiddenField3.value
@@ -294,6 +295,7 @@ Protected Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Cl
     Dim amount As Decimal = 0
     Dim prraised As String = HiddenField8.value
     Dim po As String = HiddenField9.value
+    Dim itemname As String = HiddenField10.value
     
 
 
@@ -317,12 +319,11 @@ End If
 
     oconn.Open()
     myCommand1.Parameters.Clear()
-    myCommand1.CommandText = "Update [order] set admin_id = @admin_id, requester_id = @requester_id, item_financial_year = @item_financial_year, item_name = @item_name ,item_quality = @item_quality, item_quality_admin = @item_quality_admin, item_quality_SysRecordDate = @item_quality_SysRecordDate,item_unit_price = @item_unit_price, item_unit_price_admin = @item_unit_price_admin, item_unit_price_SysRecordDate = @item_unit_price_SysRecordDate,item_additional_charges = @item_additional_charges ,item_additional_charges_admin = @item_additional_charges_admin, item_additional_charges_SysRecordDate = @item_additional_charges_SysRecordDate,assign = @assign, assign_admin = @assign_admin, assign_SysRecordDate = @assign_SysRecordDate, budget_code = @budget_code,budget_code_admin = @budget_code_admin, budget_code_SysRecordDate = @budget_code_SysRecordDate, process = @process, process_admin = @process_admin, process_SysRecordDate = @process_SysRecordDate ,remark = @remark, remark_admin = @remark_admin, remark_SysRecordDate = @remark_SysRecordDate, Amount = @Amount, pr_raised = @pr_raised, pr_raised_admin = @pr_raised_admin, pr_raised_SysRecordDate = @pr_raised_SysRecordDate, po = @po, po_admin = @po_admin, po_SysRecordDate = @po_SysRecordDate   Where id = @id"
+    myCommand1.CommandText = "Update [order] set admin_id = @admin_id, requester_id = @requester_id, item_financial_year = @item_financial_year, item_name = @item_name ,item_quality = @item_quality, item_quality_admin = @item_quality_admin, item_quality_SysRecordDate = @item_quality_SysRecordDate,item_unit_price = @item_unit_price, item_unit_price_admin = @item_unit_price_admin, item_unit_price_SysRecordDate = @item_unit_price_SysRecordDate,item_additional_charges = @item_additional_charges ,item_additional_charges_admin = @item_additional_charges_admin, item_additional_charges_SysRecordDate = @item_additional_charges_SysRecordDate,assign = @assign, assign_admin = @assign_admin, assign_SysRecordDate = @assign_SysRecordDate, budget_code = @budget_code,budget_code_admin = @budget_code_admin, budget_code_SysRecordDate = @budget_code_SysRecordDate, process = @process, process_admin = @process_admin, process_SysRecordDate = @process_SysRecordDate ,remark = @remark, remark_admin = @remark_admin, remark_SysRecordDate = @remark_SysRecordDate, Amount = @Amount, pr_raised = @pr_raised, pr_raised_admin = @pr_raised_admin, pr_raised_SysRecordDate = @pr_raised_SysRecordDate, po = @po, po_admin = @po_admin, po_SysRecordDate = @po_SysRecordDate , item_name_admin = @item_name_admin,item_name_SysRecordDate = @item_name_SysRecordDate   Where id = @id"
     myCommand1.Parameters.AddWithValue("@id", orderId)
     myCommand1.Parameters.AddWithValue("@admin_id", adminId)
     myCommand1.Parameters.AddWithValue("@requester_id", requesterId)
     myCommand1.Parameters.AddWithValue("@item_financial_year", itemFinancialYear)
-    myCommand1.Parameters.AddWithValue("@item_name", itemName)
     myCommand1.Parameters.AddWithValue("@item_quality", itemquality)
     myCommand1.Parameters.AddWithValue("@item_unit_price", itemunitprice)
     myCommand1.Parameters.AddWithValue("@item_additional_charges", additionalCharges)
@@ -333,6 +334,7 @@ End If
     myCommand1.Parameters.AddWithValue("@Amount", Amount)
     myCommand1.Parameters.AddWithValue("@pr_raised", prraised)
     myCommand1.Parameters.AddWithValue("@po", po)
+    myCommand1.Parameters.AddWithValue("@item_name", itemname)
 
 
 If HiddenField1.Value <> lbl_item_quality.Text Then
@@ -407,6 +409,15 @@ Else
     myCommand1.Parameters.AddWithValue("@po_admin", Session("po_admin"))
     myCommand1.Parameters.AddWithValue("@po_SysRecordDate", Session("po_SysRecordDate"))
 End If
+
+If HiddenField10.Value <> lbl_item_name.Text Then
+    myCommand1.Parameters.AddWithValue("@item_name_admin", Session("corpID"))
+    myCommand1.Parameters.AddWithValue("@item_name_SysRecordDate", DateTime.Now)
+Else
+    myCommand1.Parameters.AddWithValue("@item_name_admin", Session("item_name_admin"))
+    myCommand1.Parameters.AddWithValue("@item_name_SysRecordDate", Session("item_name_SysRecordDate"))
+End If
+
 
 
 

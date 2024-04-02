@@ -48,7 +48,7 @@
 
             <div class="col-md-3">
                 <label for="lbl_item_name" class="form-label">Item Descriptions</label>
-                <asp:TextBox class="form-control is-valid" id="lbl_item_name" Rows="1" TextMode="MultiLine" runat="server"  ClientIDMode="Static" required disabled></asp:TextBox>
+                <asp:TextBox class="form-control is-valid" id="lbl_item_name" Rows="1" TextMode="MultiLine" runat="server"  ClientIDMode="Static" required ></asp:TextBox>
                 <div class="valid-feedback">
                   <asp:Label ID="lbl_item_name_admin" runat="server" Text=""></asp:Label>   (<asp:Label ID="lbl_item_name_SysRecordDate" runat="server" Text=""></asp:Label>)
                 </div>
@@ -116,25 +116,24 @@
                 <div class="col-md-3" >
                   <label for="lbl_budget_code" class="form-label">Funding Source</label>
               <asp:DropDownList class="btn btn-secondary dropdown-toggle"  ID="lbl_budget_code" runat="server"  style="width:320px;">
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38211 CND Nursing Administration">38211 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38222 CND Nursing Administration">38222 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38224 CND Nursing Administration">38224 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38443 ICT">38443 ICT</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39072 CND Nursing Administration">39072 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39073 CND Nursing Administration">39073 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39079 CND Nursing Administration">39079 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39092 CND Nursing Administration">39092 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39107 CND Nursing Administration">39107 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39114 CND Nursing Administration">39114 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39145 CND Nursing Administration">39145 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39636 CND Nursing Administration">39636 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47101 CND Nursing Administration">47101 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47111 CND Nursing Administration">47111 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47198 CND Nursing Administration">47198 CND Nursing Administration</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="70003 Central Training - Nursing Professional Committee (Overseas) (5)">70003 Central Training - Nursing Professional Committee (Overseas) (5)</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="72003 Central Training - Nursing Professional Committee (Local) (5)">72003 Central Training - Nursing Professional Committee (Local) (5)</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="72006 Department Training (Local)">72006 Department Training (Local)</asp:ListItem>
-                  <asp:ListItem style="text-align: left;" class="dropdown-item" Value="73206 HA Nursing Schools (Basic Nursing Education)">73206 HA Nursing Schools (Basic Nursing Education)</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38211 CND Nursing Administration">38211 CND Nursing Administration</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38222 PAS / PDS">38222 PAS / PDS</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38224 PRC">38224 PRC</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="38443 Bedside Curtains">38443 Bedside Curtains</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39072 CPRC">39072 CPRC</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39073 Purchase of patients care items">39073 Purchase of patients care items</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39079 Enhancement of Organ Donation Services">39079 Enhancement of Organ Donation Services</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39092 Indirect COVID-19 expenditure">39092 Indirect COVID-19 expenditure</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39107 Dedicated Medical Equipment">39107 Dedicated Medical Equipment</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39114 Documentation for Physical Restraint and Patients’ Belonging Tracking for Inter-hospital Transfer">39114 Documentation for Physical Restraint and Patients’ Belonging Tracking for Inter-hospital Transfer</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39145 Scale up – Set up of Smart Hospital Team in KCC">39145 Scale up – Set up of Smart Hospital Team in KCC</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="39636 Residential Care Homes for the Elderly (RCHEs)">39636 Residential Care Homes for the Elderly (RCHEs)</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47101 Control Measures For Vancomycin Resistant Enterococci (VRE) Cases">47101 Control Measures For Vancomycin Resistant Enterococci (VRE) Cases</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47111 Winter Surge">47111 Winter Surge</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="47198 COVID-19">47198 COVID-19</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="70003 Central Training – Nursing Professional Committee (Overseas)">70003 Central Training – Nursing Professional Committee (Overseas)</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="72003 Central Training – Nursing Professional Committee (Local)">72003 Central Training – Nursing Professional Committee (Local)</asp:ListItem>
+                <asp:ListItem style="text-align: left;" class="dropdown-item" Value="73206 HA Nursing Schools (Basic Nursing Education)">73206 HA Nursing Schools (Basic Nursing Education)</asp:ListItem>
                   <asp:ListItem style="text-align: left;" class="dropdown-item" Value="------- Others">------- Others</asp:ListItem>
               </asp:DropDownList>
 
@@ -208,6 +207,7 @@
             <asp:HiddenField ID="HiddenField7" runat="server" />
             <asp:HiddenField ID="HiddenField8" runat="server" />
             <asp:HiddenField ID="HiddenField9" runat="server" />
+            <asp:HiddenField ID="HiddenField10" runat="server" />
 
         </form>
     </div>
@@ -219,7 +219,7 @@
 
 <script>
 function goBack() {
-    window.location.replace("https://qehcndsvr2/Purchase/mangement.aspx");
+    window.location.replace("./mangement.aspx");
   }
   </script>
 
@@ -235,6 +235,7 @@ function goBack() {
       var remark = document.getElementById("lbl_remark").value;
       var pr_raised = document.getElementById("lbl_pr_raised").value;
       var po = document.getElementById("lbl_po").value;
+      var itemname = document.getElementById("lbl_item_name").value;
 
     
       // Store the value in the session storage
@@ -247,6 +248,7 @@ function goBack() {
       document.getElementById("HiddenField7").value = remark
       document.getElementById("HiddenField8").value = pr_raised
       document.getElementById("HiddenField9").value = po
+      document.getElementById("HiddenField10").value = itemname
 
     
       // Return true to allow the form to submit
