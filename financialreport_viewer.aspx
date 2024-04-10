@@ -114,7 +114,7 @@
       <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
       <label class="btn btn-outline-primary" for="btnradio0">All</label>
 
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
       <label class="btn btn-outline-primary" for="btnradio1">2023-2024</label>
     
       <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
@@ -165,14 +165,14 @@
 
 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" HeaderStyle-HorizontalAlign="Center" OnSorting="GridView1_Sorting" AllowSorting="True" CssClass="table table-bordered border-primary table-hover" DataKeyNames="admin_id" >
                   <Columns>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="id" HeaderText="Order" SortExpression="id" />
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_financial_year" HeaderText="Financial Year" SortExpression="item_financial_year"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item" SortExpression="item_name"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_quality" HeaderText="Quantity" SortExpression="item_quality"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_unit_price" HeaderText="Unit Price" SortExpression="item_unit_price"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_additional_charges" HeaderText="Additional Charges" SortExpression="item_additional_charges"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Budge Code" SortExpression="budget_code"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="amount" HeaderText="Amount" SortExpression="amount"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="id" HeaderText="Order" SortExpression="id" />
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_financial_year" HeaderText="Financial Year" SortExpression="item_financial_year"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_name" HeaderText="Item" SortExpression="item_name"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_quality" HeaderText="Quantity" SortExpression="item_quality"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_unit_price" HeaderText="Unit Price" SortExpression="item_unit_price"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_additional_charges" HeaderText="Additional Charges" SortExpression="item_additional_charges"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Funding Source" SortExpression="budget_code"/>
+                    <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="amount" HeaderText="Amount (HKD)" SortExpression="amount"/>
 
                              </Columns>
                         <EmptyDataTemplate>

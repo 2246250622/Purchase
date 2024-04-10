@@ -97,7 +97,7 @@
         <input type="radio" class="btn-check" name="btnradio" id="btnradio0" autocomplete="off" checked>
         <label class="btn btn-outline-primary" for="btnradio0">All</label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
         <label class="btn btn-outline-primary" for="btnradio1">2023-2024</label>
       
         <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
@@ -155,7 +155,7 @@
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_unit_price" HeaderText="Unit Price" SortExpression="item_unit_price"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="item_additional_charges" HeaderText="Additional Charges" SortExpression="item_additional_charges"/>
                             <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="budget_code" HeaderText="Funding Source" SortExpression="budget_code"/>
-                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="amount" HeaderText="Amount" SortExpression="amount"/>
+                            <asp:BoundField ItemStyle-HorizontalAlign="Center" DataField="amount" HeaderText="Amount (HKD)" SortExpression="amount"/>
 
                              </Columns>
                         <EmptyDataTemplate>
