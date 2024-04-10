@@ -111,7 +111,7 @@ Protected Sub sendEmail(sender As Object, e As EventArgs) Handles SubmitOrder.Cl
                 'mail.To.Add("kwongmk@ha.org.hk")
                 mail.To.Add("nsc501@ha.org.hk")
                 mail.To.Add("wps508@ha.org.hk")
-                mail.To.Add("jason.cheuk@ha.org.hk")
+                mail.To.Add("shirley.hung@ha.org.hk")
                 'mail.To.Add("kathy.lok@ha.org.hk")
                               
                 
